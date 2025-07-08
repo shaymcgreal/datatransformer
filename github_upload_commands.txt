@@ -1,0 +1,28 @@
+# Simple GitHub Upload Instructions
+
+# 1. Open Command Prompt or Git Bash
+# 2. Navigate to your project directory:
+cd "c:\Users\shayricklesmcgreal\OneDrive - WorkNest\Documents\codebase\03. Scripting\BVD AccountAnalysis"
+
+# 3. Initialize a git repository (if not already done):
+git init
+
+# 4. Add all files except those in Versions and Data folders (as specified in .gitignore):
+git add .
+
+# 5. Commit the changes with a descriptive message:
+git commit -m "Initial commit of CSV Account Analysis tool"
+
+# 6. Connect to your GitHub repository:
+git remote add origin https://github.com/shaymcgreal/datatransformer.git
+
+# 7. Push the code to GitHub:
+git push -u origin main
+
+# If the default branch is "master" instead of "main", use:
+# git push -u origin master
+
+# Note: You might be prompted for your GitHub credentials
+# For modern GitHub authentication, you may need a Personal Access Token
+# instead of your password. You can create one at:
+# https://github.com/settings/tokens

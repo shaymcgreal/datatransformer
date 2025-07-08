@@ -1,0 +1,94 @@
+# PowerShell Commands to Upload to GitHub
+
+# 1. Navigate to your project directory
+cd "c:\Users\shayricklesmcgreal\OneDrive - WorkNest\Documents\codebase\03. Scripting\BVD AccountAnalysis"
+
+# OPTION A: NEW REPOSITORY SETUP
+# 2a. Initialize a Git repository (if not already done)
+git init
+
+# OPTION B: CONNECT TO EXISTING REPOSITORY
+# 2b. If you want to work with an existing repository instead, clone it first:
+# git clone https://github.com/shaymcgreal/datatransformer.git .
+# If the directory isn't empty, use:
+# git clone https://github.com/shaymcgreal/datatransformer.git temp
+# Copy all files from temp to current directory and then delete temp
+# Remove-Item -Path "temp" -Recurse -Force
+
+# 3. Create a .gitignore file to exclude Versions and Data folders
+@"
+# Ignore specific folders
+Versions/
+Data/
+
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+"@ | Out-File -FilePath ".gitignore" -Encoding utf8
+
+# 4. Add all files to Git
+git add .
+
+# 5. Commit the changes with a message
+git commit -m "Initial commit of CSV Account Analysis tool"
+
+# SIMPLE DEPLOYMENT TO EXISTING REPOSITORY
+# If you want to simply point to an existing GitHub repository and push your code:
+
+# A. Check if remote already exists
+git remote -v
+
+# B. If remote doesn't exist, add it
+git remote add origin https://github.com/shaymcgreal/datatransformer.git
+
+# C. If remote already exists but you want to update it to a different URL
+# git remote set-url origin https://github.com/shaymcgreal/datatransformer.git
+
+# D. Push your code to the repository (using main branch)
+git push -u origin main
+
+# E. If your repository uses a different default branch (e.g., master):
+# git push -u origin master
+
+# Note: This assumes the repository is already created on GitHub.
+# If you're prompted for authentication, you'll need to use a Personal Access Token
+# instead of your password. Create one at: https://github.com/settings/tokens
+# instead of your password. Create one at: https://github.com/settings/tokens
