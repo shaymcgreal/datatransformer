@@ -98,47 +98,6 @@ The MIT License is a permissive software license that:
 
 To apply this license officially, create a LICENSE file in your repository.
 
-## Deployment
-
-To deploy this project to your GitHub repository:
-
-1. **Initialize Git Repository** (if not already done):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   ```
-
-2. **Connect to GitHub Repository**:
-   ```bash
-   git remote add origin https://github.com/shaymcgreal/datatransformer.git
-   ```
-
-3. **Push to GitHub**:
-   ```bash
-   git push -u origin main
-   ```
-
-4. **Update Existing Repository**:
-   ```bash
-   git add .
-   git commit -m "Update with new features"
-   git push
-   ```
-
-5. **Create Release** (Optional):
-   - Go to your GitHub repository
-   - Click on "Releases"
-   - Create a new release with a version tag
-   - Add release notes
-
-### CI/CD Integration
-
-To set up automated testing and deployment:
-1. Create a `.github/workflows` directory
-2. Add a workflow file (e.g., `test.yml`) for automated testing
-3. Configure deployment actions as needed
-
 ## Acknowledgments
 
 - Uses [RapidFuzz](https://github.com/maxbachmann/RapidFuzz) for fuzzy string matching
