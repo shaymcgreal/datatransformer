@@ -1,6 +1,6 @@
 # CSV Account Analysis & Duplicate Detection
 
-A robust Python tool for analyzing CSV data files, validating data quality, and detecting duplicate records using advanced fuzzy matching algorithms.
+A WIP Python tool for analyzing CSV data files, validating data quality, and detecting duplicate records using advanced fuzzy matching algorithms.
 
 ## Features
 
